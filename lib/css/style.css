@@ -1,0 +1,118 @@
+*{padding: 0; margin: 0;outline: none;text-decoration: none;box-sizing: border-box;}
+
+ul{list-style: none;}
+
+a{text-decoration: none;}
+
+img{max-width: 100%;}
+
+@media screen and (min-width: 1200px ){
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: space-between;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer"
+    ;
+        background: darkgrey;
+        width: 100%;
+        height: 200px;
+
+    }
+    header{grid-area: header;
+    display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "nav"
+        "img_logo"
+    ;
+        background: dimgrey;
+        width: 100%;
+        height: 120px;
+    }
+    nav{grid-area: nav;
+    display: grid;
+        grid-template-columns: 100%;
+        height: 40px;
+        font-size: 17px;
+        text-align: right;
+        padding: 10px 20px;
+        color: darkgrey;
+        border: none;
+
+    }
+    nav li{display: inline-block;padding: 0 10px 0 10px;}
+
+    img_logo{grid-area: img_logo;}
+    main{grid-area: main;
+    display: grid;
+        grid-template-columns: 100%;
+        grid-template:
+        "title "
+        "naruto "
+        "sasuke"
+        "sakura"
+    ;
+    }
+    .title{grid-area: title;text-align: center;font-size: 25px; }
+    .naruto{grid-area:naruto;background: white;border: 1px solid #dadce0;;margin: 0 200px 10px 200px;padding: 20px;line-height: 25px;color: darkgrey;}
+    .naruto h2{padding: 10px;}
+    .naruto nav{text-align: left;}
+    .naruto li {display: inline-block; }
+    .naruto li:last-child{border: 1px solid black; }
+
+
+    .sasuke{grid-area:sasuke;display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+        "subt subtt"
+        "map lorem"
+
+    ;
+        background: white;border: 1px solid #dadce0;;margin: 0 200px 10px 200px;padding: 20px;line-height: 25px;color: darkgrey;
+    }
+    .sakura{grid-area: sakura;background: white;border: 1px solid #dadce0;;margin: 0 200px 10px 200px;padding: 20px;line-height: 25px;color: darkgrey;}
+    .sakura h3{padding-bottom: 10px;}
+    .subt{grid-area: subt;}
+    .subtt{grid-area: subtt; }
+    .map{grid-area: map;}
+    .lorem{grid-area: lorem;text-align: center;padding-top: 200px;}
+    button{height: 30px;width: 100px;background: lightsalmon;border: none;border-radius: 20px;color: #dadce0}
+    form select{padding : 5px;text-align: center;}
+    form input{padding: 5px;}
+
+
+
+
+    footer{grid-area: footer;
+    display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-areas:
+        "footer1 footer2 footer3 footer4"
+
+    ;
+
+
+        height:300px;
+
+        background: dimgrey;
+        justify-content: space-between;
+        padding: 0 100px 0 100px;
+        line-height: 20px;
+        font-size: 15px;
+        align-items: center;
+        color: #dadce0;
+
+
+    }
+    footer p {font-size: 20px;}
+    footer li{ display: inline-block;}
+    .footer1{grid-area: footer1; display: grid;padding: 20px;line-height: 30px;}
+    .footer1 li p{position: relative;padding-bottom:10px;font-size: 13px;}
+    .footer1 strong{border: 1px solid mediumseagreen;background:mediumseagreen;color: white;text-align: center;border-radius: 20px; width: 40%;}
+    .footer1 h4{border: 1px solid mediumseagreen;background:deeppink;color: white;text-align: center;border-radius: 20px; width: 80%; margin: 10px 0 10px 0; }
+    .footer4{padding-bottom: 90px;}
+
+}
